@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define _CRT_SECURE_NO_WARNINGS
 int searchInsert(int* nums, int numsSize, int target)
 {
@@ -26,4 +27,30 @@ int searchInsert(int* nums, int numsSize, int target)
     }
     return left;
 
+=======
+#define _CRT_SECURE_NO_WARNINGS
+int searchInsert(int* nums, int numsSize, int target)
+{
+    //¶þ·Ö²éÕÒ
+    int left = 0;
+    int right = numsSize - 1;
+    int mid = left + (right - left) / 2;
+    while (left <= right)
+    {
+
+        if (nums[mid] == target)
+            return mid;
+        else if (nums[mid] > target)
+        {
+            right = mid - 1;
+        }
+        else
+        {
+            left = mid + 1;
+        }
+        mid = left + (right - left) / 2;
+    }
+    return mid;
+
+>>>>>>> 098351dd52633bb3bc2fb2d0480a43cc16ae4b95
 }
